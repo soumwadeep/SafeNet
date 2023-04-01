@@ -1,20 +1,32 @@
 {
   "manifest_version": 2,
-  "name": "Safe Browsing Extension",
-  "version": "1.0.0",
-  "description": "This extension blocks unsafe URLs using the Google Safe Browsing API.",
+  "name": "SafeNet",
+  "version": "1.0",
+
+  "description": "This extension protects against fraudulent websites.",
+
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "permissions": ["activeTab", "tabs"],
+
+  "permissions": ["tabs", "activeTab", "storage"],
+
+  "browser_action": {
+    "default_title": "SafeNet",
+    "default_popup": "index.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
   "background": {
     "scripts": ["background.js"],
     "persistent": false
-  },
-  "browser_action": {
-    "default_icon": "icon16.png",
-    "default_popup": "popup.html"
   }
 }
