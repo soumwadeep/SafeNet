@@ -1,2 +1,2 @@
 # SafeNet
-Extension Which Will Safe You From Hackers
+Browser Extension Which Will Safe You From Hackers
