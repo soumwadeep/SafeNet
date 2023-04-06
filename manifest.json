@@ -1,32 +1,25 @@
 {
-  "manifest_version": 2,
-  "name": "SafeNet",
-  "version": "1.0",
-
-  "description": "This extension protects against fraudulent websites.",
-
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
-
-  "permissions": ["tabs", "activeTab", "storage"],
-
-  "browser_action": {
-    "default_title": "SafeNet",
-    "default_popup": "index.html"
-  },
-
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ],
-
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "name": "SafeNet",
+    "version": "1.0",
+    "description": "Blocks malicious links using the Google Safe Browsing API",
+    "manifest_version": 3,
+    "permissions": [
+      "safeBrowsing",
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>",
+      "https://safebrowsing.googleapis.com/",
+      "https://www.googleapis.com/"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+      "google_safe_browsing.json"
+    ]
   }
-}
+  
