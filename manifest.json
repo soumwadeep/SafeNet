@@ -1,25 +1,15 @@
 {
-    "name": "SafeNet",
-    "version": "1.0",
-    "description": "Blocks malicious links using the Google Safe Browsing API",
-    "manifest_version": 3,
-    "permissions": [
-      "safeBrowsing",
-      "webRequest",
-      "webRequestBlocking",
-      "<all_urls>",
-      "https://safebrowsing.googleapis.com/",
-      "https://www.googleapis.com/"
-    ],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": true
-    },
-    "browser_action": {
-      "default_popup": "popup.html"
-    },
-    "web_accessible_resources": [
-      "google_safe_browsing.json"
-    ]
+  "manifest_version": 3,
+  "name": "SafeNet",
+  "version": "1.0.0",
+  "description": "An Extension Which Will Safe You From Hackers!",
+  "action": {
+    "default_icon": "assets/icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
   }
-  
+}
