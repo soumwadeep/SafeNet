@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   color: black;
   font-family: 'Lobster', cursive;
   text-align: center;
+  width: 100%;
+  min-width: 500px;
+  height: auto;
+  overflow-x: hidden;
 }
