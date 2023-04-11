@@ -5,7 +5,7 @@
   "description": "An Extension Which Will Safe You From Hackers!",
   "action": {
     "default_icon": "assets/icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "index.html"
   },
   "icons": {
     "16": "assets/icon16.png",

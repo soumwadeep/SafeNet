@@ -8,6 +8,7 @@ body {
   text-align: center;
   width: 100%;
   min-width: 500px;
+  border-radius: 30px!important;
   height: auto;
   overflow-x: hidden;
 }
